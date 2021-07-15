@@ -1,0 +1,10 @@
+/**
+ * 404 page
+ */
+
+ const NotFound = () => {
+   return <div>404</div>;
+ };
+ 
+ export default NotFound;
+ 
