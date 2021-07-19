@@ -1,9 +1,9 @@
 import { combineReducers, Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 
-import home from './home';
+import homeReducer from './home';
 
-const rootReducer = combineReducers({ home });
+const rootReducer = combineReducers({ homeReducer });
 
 export type RootState = ReturnType<typeof rootReducer>;
 

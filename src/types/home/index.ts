@@ -10,7 +10,5 @@ export interface HomeState {
 
 export interface ActivityAction {
   type: typeof Types.GET_HOME_DATA;
-  payload: Exclude<HomeState, 'activityPageSortType'>;
+  payload: HomeState;
 }
-
-// export type ActivityAction = GetActivity | SetSortType;
