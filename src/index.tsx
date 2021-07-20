@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import Router from '@/router';
 import configureStore from '@/store';
 import reportWebVitals from './reportWebVitals';
+import './utils/lib/before-load';
+import './style/index.less';
 
 const store = configureStore();
 
