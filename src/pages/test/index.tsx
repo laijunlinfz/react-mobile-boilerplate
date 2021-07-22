@@ -3,6 +3,7 @@
  */
 
 import React from "react";
+import { Button, Toast } from "antd-mobile";
 import { identity, identity2, loggingIdentity } from "@/utils/index";
 import "./index.less";
 
@@ -13,7 +14,15 @@ const Test = () => {
   const res3 = loggingIdentity<number>([1, 2]);
   console.log("test res : ", res, res2, res3);
 
-  return <div className="test-container">this is test page</div>;
+  const toast = () => {
+    Toast.info('ttttt');
+  };
+  return (
+    <div className="test-container">
+      this is test page
+      <Button type="primary" onClick={toast} >primary</Button>
+    </div>
+  );
 };
 
 export default Test;

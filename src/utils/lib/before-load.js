@@ -150,7 +150,7 @@
     // } else {
     //     countScale = 1;
     // }
-    setScale = 1 / countScale;
+    setScale = 2 / countScale;
     viewSet.setAttribute(
       'content',
       `width=device-width,user-scalable=no,initial-scale=${setScale},maximum-scale=${setScale},minimum-scale=${setScale},viewport-fit=cover`
