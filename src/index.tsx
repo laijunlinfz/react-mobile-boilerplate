@@ -6,7 +6,7 @@ import configureStore from '@/store';
 import reportWebVitals from './reportWebVitals';
 import './utils/lib/before-load';
 import './styles/index.less';
-// test
+// test 123
 
 const store = configureStore();
 
