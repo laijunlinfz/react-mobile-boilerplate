@@ -1,4 +1,7 @@
 'use strict';
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+
+const smp = new SpeedMeasurePlugin();
 
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'production';
@@ -136,7 +139,10 @@ checkBrowsers(paths.appPath, isInteractive)
 function build(previousFileSizes) {
   console.log('Creating an optimized production build...');
 
-  const compiler = webpack(config);
+  // 使用 speed-measure-webpack-plugin 插件可以测量各个插件和loader所花费的时间
+  const compiler = webpack(smp.wrap(config));
+  // const compiler = webpack(config);
+
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       let messages;

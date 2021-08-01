@@ -13,12 +13,17 @@ const routes: RouteConfig[] = [
     component: React.lazy(() => import(/* webpackChunkName: 'pages/login' */ '@/pages/login'))
   },
   {
+    path: "/resume",
+    exact: true,
+    component: React.lazy(() => import(/* webpackChunkName: 'pages/resume' */ '@/pages/resume'))
+  },
+  {
     path: "/test",
     exact: true,
     component: React.lazy(() => import(/* webpackChunkName: 'pages/test' */ '@/pages/test'))
   },
   {
-    component: React.lazy(() => import(/* webpackChunkName: 'pages/notFound' */ '@/pages/notFound')),
+    component: React.lazy(() => import(/* webpackChunkName: 'pages/404' */ '@/pages/404')),
     name: '404'
   }
 ];

@@ -27,6 +27,14 @@ const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpack
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
+// 启动电脑多核 CPU 编译
+// thread-loader 多线程编译，配置比 happypack 简单， 放在 use 数组首位
+// const Happypack = require('happypack');
+
+// HardSourceWebpackPlugin 为模块提供中间缓存，缓存默认的存放路径是: node_modules/.cache/hard-source
+// 首次构建时间没有太大变化，但是第二次开始，构建时间大约可以节约 80%。
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
@@ -157,6 +165,11 @@ module.exports = function (webpackEnv) {
         }
       );
     }
+    
+
+    // 在一些性能开销较大的 loader 之前添加 cache-loader，将结果缓存中磁盘中。
+    // 默认保存在 node_modueles/.cache/cache-loader 目录下
+    // loaders.unshift({ loader: require.resolve('cache-loader') });
     return loaders;
   };
 
@@ -588,6 +601,9 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
+      // HardSourceWebpackPlugin 为模块提供中间缓存，缓存默认的存放路径是: node_modules/.cache/hard-source
+      // 首次构建时间没有太大变化，但是第二次开始，构建时间大约可以节约 80%。
+      new HardSourceWebpackPlugin(),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
