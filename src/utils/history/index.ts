@@ -8,7 +8,7 @@ enum Action {
 
 class HistoryInstance {
   constructor() {
-    this.history = createBrowserHistory();
+    this.history = createBrowserHistory({ forceRefresh: true });
   }
 
   readonly history: History
