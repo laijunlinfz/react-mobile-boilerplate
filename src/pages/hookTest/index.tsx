@@ -18,7 +18,7 @@ const HookTest = () => {
   return (
     <div className="hook-test-container">
       this is hook test page {name}
-      <Button type="primary" onClick={handleClicked} >primary</Button>
+      <Button type="submit" onClick={handleClicked} >primary</Button>
     </div>
   );
 };

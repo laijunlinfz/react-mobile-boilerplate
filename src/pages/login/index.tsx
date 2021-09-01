@@ -15,12 +15,11 @@ const Login = () => {
   const history = useHistory();
 
   const toHome = () => {
-    // history.push('/resume');
     historyUtils.push('/resume');
   };
   return <div>
     this is login page
-    <Button type="primary" onClick={toHome} >HOME</Button>
+    <Button color="primary" onClick={toHome} >HOME</Button>
   </div>;
 };
 
