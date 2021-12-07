@@ -11822,10 +11822,10 @@
   dependencies:
     "minimalistic-assert" "^1.0.0"
 
-"web-vitals@^1.0.1":
-  "integrity" "sha1-BlNTCBaJhgliOaqEcW5otMaubRw="
-  "resolved" "https://registry.nlark.com/web-vitals/download/web-vitals-1.1.2.tgz?cache=0&sync_timestamp=1625183362475&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fweb-vitals%2Fdownload%2Fweb-vitals-1.1.2.tgz"
-  "version" "1.1.2"
+"web-vitals@^2.1.2":
+  "integrity" "sha512-nZnEH8dj+vJFqCRYdvYv0a59iLXsb8jJkt+xvXfwgnkyPdsSLtKNlYmtTDiHmTNGXeSXtpjTTUcNvFtrAk6VMQ=="
+  "resolved" "http://mirrors.cloud.tencent.com/npm/web-vitals/-/web-vitals-2.1.2.tgz"
+  "version" "2.1.2"
 
 "webidl-conversions@^5.0.0":
   "integrity" "sha1-rlnIoAsSFUOirMZcBDT1ew/BGv8="
